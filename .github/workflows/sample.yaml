@@ -11,6 +11,7 @@ jobs:
       - name: multiline script
         run: |
           ibmcloud login -a cloud.ibm.com --apikey ${{ secrets.IBM_APIKEY }} -r us-south -g Default
+          ibmcloud
           ibmcloud ks cluster config --cluster ${{ secrets.CLUSTER_ID }}
           kubectl version --short
           kubectl get namespace
