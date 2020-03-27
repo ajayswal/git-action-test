@@ -13,7 +13,7 @@ jobs:
           ibmcloud login -a cloud.ibm.com --apikey ${{ secrets.IBM_APIKEY }} -r us-south -g Default
           ibmcloud target -o twcoap@us.ibm.com
           ibmcloud target -s dev
-          ibmcloud ks cluster config --cluster bn1mshrd0o9ielralfi0
+          ibmcloud ks cluster config --cluster ${{ secrets. CLUSTER_ID }}
           kubectl version --short
           kubectl get namespace
           git clone ${{ secrets.GIT_CKECKOUT }}
