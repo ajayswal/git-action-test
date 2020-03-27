@@ -19,3 +19,7 @@ jobs:
           git clone ${{ secrets.GIT_CKECKOUT }}
           ls -al jenkins1/
           pwd
+          kubectl create namespace gitaction
+          kubectl create -f jenkins-deployment.yaml -n gitaction
+          kubectl get namespace
+          kubectl get deployment -n gitaction
