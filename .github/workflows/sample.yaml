@@ -10,9 +10,9 @@ jobs:
         run:  curl -sL https://ibm.biz/idt-installer | bash
       - name: multiline script
         run: |
-          ibmcloud login -a cloud.ibm.com --apikey ${{ secrets.ibmapikey }} -r us-south -g Default
-          ibmcloud ks cluster config --cluster bn1mshrd0o9ielralfi0
+          ibmcloud login -a cloud.ibm.com --apikey ${{ secrets.IBM_APIKEY }} -r us-south -g Default
+          ibmcloud ks cluster config --cluster ${{ secrets.CLUSTER_ID }}
           kubectl version --short
           kubectl get namespace
-          git clone https://github.com/ajayswal/jenkins1.git
+          git clone ${{ secrets.GIT_CKECKOUT }}
           ls -al jenkins1/
