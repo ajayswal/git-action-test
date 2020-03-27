@@ -20,6 +20,6 @@ jobs:
           ls -al jenkins1/
           pwd
           kubectl create namespace gitaction
-          kubectl create -f jenkins-deployment.yaml -n gitaction
+          kubectl create -f jenkins1/jenkins-deployment.yaml -n gitaction
           kubectl get namespace
-          kubectl get deployment -n gitaction jenkins1/
+          kubectl get deployment -n gitaction
