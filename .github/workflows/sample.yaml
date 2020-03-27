@@ -18,3 +18,4 @@ jobs:
           kubectl get namespace
           git clone ${{ secrets.GIT_CKECKOUT }}
           ls -al jenkins1/
+          pwd
