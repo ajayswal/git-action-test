@@ -23,3 +23,4 @@ jobs:
           kubectl create -f jenkins1/jenkins-deployment.yaml -n gitaction
           kubectl get namespace
           kubectl get deployment -n gitaction
+          echo
