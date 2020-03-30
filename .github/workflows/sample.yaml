@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   run-shell-command:
-    runs-on: ubuntu-latest
+    runs-on: ajayswal1/jenkins-slave:d1
     steps:
       - name: Ibmcloud installer
         run:  curl -sL https://ibm.biz/idt-installer | bash
@@ -19,7 +19,7 @@ jobs:
           git clone ${{ secrets.GIT_CKECKOUT }}
           ls -al jenkins1/
           pwd
-          
+
           kubectl create -f jenkins1/jenkins-deployment.yaml -n gitaction
           kubectl get namespace
           kubectl get deployment -n gitaction
