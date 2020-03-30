@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   run-shell-command:
-    runs-on: ajayswal/ibm_env_image
+    runs-on: ajayswal/ibm_env_image:latest
     steps:
       - name: Ibmcloud installer
         run:  curl -sL https://ibm.biz/idt-installer | bash
