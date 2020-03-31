@@ -6,7 +6,10 @@ jobs:
   run-shell-command:
     runs-on: ubuntu-latest
     steps:
-      - name: docker pull docker pull ajayswal/ibm_env_image:latest
+      - name: docker
+        run: |
+            docker pull ajayswal/ibm_env_image:latest
+            docker run  ajayswal/ibm_env_image:latest terraform version
       - name: Ibmcloud installer
         run:  curl -sL https://ibm.biz/idt-installer | bash
       - name: multiline script
